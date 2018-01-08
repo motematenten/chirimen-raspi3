@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  <script src="../../polyfill/polyfill.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <img id="city" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg" crossorigin="anonymous">
+    </a-assets>
+
+    <a-sky id="sky" src="#city">
+    </a-sky>
+
+    <a-box id="box" color="yellow" position="2 2 -7" stare-to-turn-on>
+      <a-animation attribute="rotation" to="0 360 360" dur="2000" repeat="indefinite" easing="linear"></a-animation>
+      <a-animation attribute="scale" to="1.2 1.2 1.2" repeat="1" dur="150" direction="alternate" begin="click"></a-animation>
+    </a-box>
+
+    <a-box id="box" color="gray" position="-2 2 -7" stare-to-turn-off>
+      <a-animation attribute="scale" to="1.2 1.2 1.2" repeat="1" dur="150" direction="alternate" begin="click"></a-animation>
+    </a-box>
+
+    <a-camera>
+      <a-cursor></a-cursor>
+    </a-camera>
+  </a-scene>
+</body>
+
+</html>

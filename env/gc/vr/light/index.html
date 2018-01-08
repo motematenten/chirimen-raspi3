@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  <script src="../../polyfill/polyfill.js"></script>
+  <script src="../../drivers/i2c-grove-light.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <img id="sechelt" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg" crossorigin="anonymous">
+    </a-assets>
+
+    <a-sky color="black">
+    </a-sky>
+
+    <a-sky id="sky" src="#sechelt" lighting>
+    </a-sky>
+
+    <a-text id="light-value" color="white" value="Connecting..." position="0 2 -3"></a-text>
+
+  </a-scene>
+</body>
+
+</html>

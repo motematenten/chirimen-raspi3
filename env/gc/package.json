@@ -1,0 +1,13 @@
+{
+  "name": "gc",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "description": "Remote CHIRIMEN examples",
+  "repository": "https://github.com/akkyie/green-chirimen",
+  "scripts": {
+    "start": "live-server"
+  },
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}
