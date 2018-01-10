@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <title>app</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="../../polyfill/polyfill.js"></script>
+    <script src="../../drivers/i2c-ADT7410.js"></script>
+    <script src="../../drivers/i2c-grove-light.js"></script>
+    <script src="./main.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <video id="video" crossorigin="anonymous" autoplay loop="true">
+                <source src="./assets/AdobeStock_181045247_Video_HD_Preview.mp4" type="video/mp4">
+                Your browser does not support the video tag
+            </video>
+            <audio id="audio" crossorigin="anonymous" loop>
+                <source src="./assets/phrase4500-p014.mp3" type="audio/mpeg">
+            </audio>
+        </a-assets>
+        <a-videosphere src="#video" id="video-element" color="black" screen></a-videosphere>
+        <a-text id="light-value" color="white" value="grovelight Connecting..." position="-2 2 -3"></a-text>
+        <a-text id="adt7410-value" color="white" value="adt7410 Connecting..." position="1 2 -2"></a-text>
+    </a-scene>
+</body>
+</html>
